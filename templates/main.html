@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<meta charset=utf-8 />
+<title>
+	{{ name }}
+</title>
+</head>
+<body>
+<a href= "/signup" >Sign Up</a>
+<p>
+{{ failure }}
+</p>
+{% if login %}
+	<p>
+	<a href= "/newpost" >Post Something</a>
+	<a href= "/myposts" >See your Posts</a>
+	<a href= "/userlist" >List of all users</a>
+	</p>
+{% else %}
+	<form method=post action="/login">
+    	UserName: <input type="text" name="username">
+    	<br>
+    	Password: <input type = "password" name = "password" >
+    	Submit: <input type = "submit" value = "Log In" >
+	<p>
+	To post something, you need to log in.
+	</p>
+{% endif %}
+</form>
+</body>
+</html>

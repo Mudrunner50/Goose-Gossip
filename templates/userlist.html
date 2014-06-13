@@ -1,0 +1,16 @@
+<!DOCTYPE = html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>
+	{{ name }}
+</title>
+</head>
+<body>
+{% for x in userlist %}
+<a href= "/user/{{ x }}" >{{ x }}</a>
+<br>
+<br>
+{% endfor %}
+</body>
+</html>
